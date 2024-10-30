@@ -8,7 +8,7 @@ export default defineConfig({
     starlight({
       title: "Mailman",
       social: {
-        github: "https://github.com/Mailman-Org/mailman",
+        github: "https://github.com/Abhi-Bhat18/mailman",
       },
       sidebar: [
         {
