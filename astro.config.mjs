@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 export default defineConfig({
-  site: "https://abhi-bhat18.github.io/mailman-docs",
+  site: "https://abhi-bhat18.github.io",
   integrations: [
     starlight({
       title: "Mailman",
