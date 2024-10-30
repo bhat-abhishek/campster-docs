@@ -1,0 +1,78 @@
+---
+title: Installation
+description: An installation guide
+---
+
+import { Steps } from "@astrojs/starlight/components";
+
+## Deployment modes
+
+- [Docker deployment](#docker-deployment)
+- [Build from source](#build-from-source)
+
+## Docker deployment
+
+Deploying Mailman with Docker is straightforward, allowing you to get the application up and running quickly without manual dependency installation.
+
+<Steps>
+
+1. Copy the `docker-compose.yaml` file 
+
+   ```yaml
+   version: '3.8'
+
+    services:
+    mailman-ui:
+        image: abhishekbhat18/mailman-ui:latest
+        ports:
+        - '3000:3000'
+        environment:
+        NEXT_PUBLIC_API_URL: http://api-server:1335
+        networks:
+        - mailman-network
+
+    mailman-api:
+        image: abhishekbhat18/mailman-api:latest
+        container_name: mailman-api
+        ports:
+        - '1335:1335'
+        env_file:
+        - ./.env
+        restart: unless-stopped
+        networks:
+        - mailman-network
+
+    networks:
+    mailman-network:
+        driver: bridge
+    ```
+    :::note 
+    For env variables take a look at [configuration]() section
+2. Run docker with the following command
+    ```sh
+    docker compose up -d
+    ```
+
+</Steps>
+
+## Build from the source
+
+<Steps>
+1. Clone the repo and install the dependencies
+    ```sh
+    git clone https://github.com/Mailman-Org/mailman
+    cd mailman
+    yarn
+    ```
+2. Build the frontend
+   ```sh
+   make build-client
+   ```
+3. Build the backend
+    ```sh
+    make build-api
+    ```
+4. Now you have the both frontend and backend and you can start the frontend and backend on you Cloud platforms like AWS, GCP and Azure
+</Steps>
+
+## Nginx Deployment
