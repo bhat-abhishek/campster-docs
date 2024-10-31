@@ -8,29 +8,25 @@ hero:
     file: ../../assets/houston.webp
   actions:
     - text: Getting started
-      link: /introduction
+      link: /mailman-docs/introduction
       icon: right-arrow
-    - text: Read the docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Quick Introduction" icon="pencil">
+    Take a look at Mailman and why your business needs mailman
+  </Card>
+  <Card title="Selfhost" icon="setting">
+	Selft host on your infrastructure with complete data control
+  </Card>
+  <Card title="Features" icon="add-document">
+    Mailman is feature packed tool which improve the workflows
+  </Card>
+  <Card title="Contribute to mailman" icon="open-book">
+    Learn more in [the Mailman Docs]("https://abhi-bhat18.github.io/mailman",).
+  </Card>
 </CardGrid>

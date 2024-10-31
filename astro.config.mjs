@@ -2,8 +2,12 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+const base = import.meta.env.BASE_URL;
+console.log("Base", base);
+
 export default defineConfig({
-  site: "https://abhi-bhat18.github.io/mailman-docs",
+  site: "https://abhi-bhat18.github.io",
+  base : '/mailman-docs',
   integrations: [
     starlight({
       title: "Mailman",
@@ -14,7 +18,7 @@ export default defineConfig({
         {
           label: "Getting started",
           items: [
-            { label: "Introduction", slug: "introduction" },
+            { label: "Introduction", slug: `introduction` },
             { label: "Installation", slug: "getting-started/installation" },
             { label: "Configuration", slug: "getting-started/configuration" },
           ],
