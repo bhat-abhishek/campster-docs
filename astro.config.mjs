@@ -3,16 +3,15 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 const base = import.meta.env.BASE_URL;
-console.log("Base", base);
 
 export default defineConfig({
   site: "https://abhi-bhat18.github.io",
-  base : '/mailman-docs',
+  base : '/campster-docs',
   integrations: [
     starlight({
-      title: "Mailman",
+      title: "Campster",
       social: {
-        github: "https://github.com/Abhi-Bhat18/mailman",
+        github: "https://github.com/bhat-abhishek/campster",
       },
       sidebar: [
         {

@@ -1,9 +1,9 @@
 ---
 title : Introduction
-description : Introduction for Mailman
+description : Introduction for Campster
 ---
 
-Mailman is an open-source, self-hostable email marketing tool built for cross-team collaboration to streamline workflows. With PostgreSQL as its only dependency, Mailman empowers teams to manage and execute campaigns effortlessly while maintaining full data control.
+Campster is an open-source, self-hostable marketing campaign tool built for cross-team collaboration to streamline workflows. With PostgreSQL as its only dependency, Campster empowers teams to manage and execute campaigns effortlessly while maintaining full data control.
 
 ## Features
 
